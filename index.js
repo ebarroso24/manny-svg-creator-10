@@ -24,17 +24,17 @@ const questions = [
     {
         type: "input",
         name: "text",
-        message: "TEXT: Enter up to (3) Characters:",
+        message: "TEXT: Enter up to 3 Characters:",
     },
     {
         type: "input",
         name: "text-color",
-        message: "TEXT COLOR: Enter a color keyword (OR a hexadecimal number):",
+        message: "TEXT COLOR: Enter a color:",
     },
     {
         type: "input",
         name: "shape",
-        message: "SHAPE COLOR: Enter a color keyword (OR a hexadecimal number):",
+        message: "SHAPE COLOR: Enter a color:",
     },
     {
         type: "list",
@@ -50,7 +50,7 @@ function writeToFile(fileName, data) {
         if (err) {
             return console.log(err);
         }
-        console.log("Congratulations, you have Generated a logo.svg!");
+        console.log("You have created a logo.svg!");
     });
 }
 
@@ -69,7 +69,7 @@ async function init() {
 		user_text = answers.text;
 	} else {
 		 
-		console.log("Invalid user text field detected! Please enter 1-3 Characters, no more and no less");
+		console.log("Please enter up to 3 characters.");
         return;
 	}
 	console.log("User text: [" + user_text + "]");
@@ -98,7 +98,7 @@ async function init() {
 		console.log("User selected Triangle shape");
 	}
 	else {
-		console.log("Invalid shape!");
+		console.log("Invalid shape");
 	}
 	user_shape.setColor(user_shape_color);
 
@@ -110,8 +110,6 @@ async function init() {
 	
 	console.log("Displaying shape:\n\n" + svgString);
 
-	console.log("Shape generation complete!");
-	console.log("Writing shape to file...");
 	writeToFile(svg_file, svgString); 
 }
 init()

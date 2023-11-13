@@ -18,6 +18,7 @@ This SVG logo maker will prompt the user to choose 1 to 3 letters to go into the
 
 This app is supposed to also use Jest to test the functionality of the app. This function is currently unavailable in this edition of the app.
 
+
 ## Credits
 
 YouTube - Zackary B: https://www.youtube.com/watch?v=zh9CsKqEhOM
